@@ -1,5 +1,7 @@
 $pink: rgb(192, 69, 121);
-$bg-gray: #f8f9fa;
+$bg-gray: #eff1f3;
+$bd-cl: #c8ced4;
+
 .text-pink {
     color: $pink;
 }
@@ -8,111 +10,126 @@ $bg-gray: #f8f9fa;
     width: 1.5rem;
 }
 
-// .cus-grid {
-//     display: grid;
-//     grid-template-columns: 5% 30% 20% 20% auto
-// }
-
-// .header-table {
-//     border-bottom: 1px solid gray;
-// }
-
-
-// .container-cus {
-//     padding-left: 3rem;
-// }
-
-// .grid-mobile {
-//     display: grid;
-//     grid-template-columns: 20% auto;
-//     grid-template-rows: repeat(4);
-//     margin-top: 0.8rem;
-// }
-
-// .header-one {
-//     background-color: $bg-gray;
-//     // margin: 1rem;
-
-//}
-.font-heading{
+.font-heading {
     font-size: 24px;
-    margin: 1rem;
+    margin: 0 1rem;
 }
-table{
-    width: 100%;
-    margin-left: 1rem;
+
+table {
+    width: calc(100% - 2rem);
+    margin: auto;
+
+
+    * {
+        position: relative;
+    }
+
+    thead tr th {
+        text-align: left;
+    }
 }
-table *{
-    position: relative;
-}
-table thead tr th{
-    text-align: left;
-}
-.file-type{
+
+.file-type {
     width: 10%;
     text-align: end;
-    padding-right: 0.5rem  ;
+    padding-right: 0.75rem;
 }
-.name{
+
+.name {
     width: 30%;
 }
-.modified{
+
+.modified {
     width: 15%;
 }
-.modified-by{
+
+.modified-by {
     width: 15%;
 }
-.add-column{
+
+.add-column {
     display: table-cell;
     width: 30%;
 }
+
 @media (min-width: 993px) {
-    tr{
-         border-bottom: 1px solid #d4dbe2;
-     }
+    table {
+        margin-top: 1rem;
+    }
+
+    thead {
+        tr:first-child {
+            border-bottom: 1px solid $bd-cl;
+        }
+    }
+
+    tr {
+        border-bottom: 1px solid $bg-gray;
+    }
 }
+
 @media screen and (max-width: 992px) {
-    table thead {
-        display: none;
+    table {
+        thead {
+            display: none;
+        }
     }
-    table tbody tr td.file-type::before{
+
+    @mixin define-content {
+        position: absolute;
+        top: 0;
+        left: 20px;
+    }
+
+    table tbody tr td.file-type::before {
         content: "File type";
-        position: absolute;
-        top: 0;
-        left: 40px;
+        @include define-content;
     }
-    table tbody tr td.name::before{
+
+    table tbody tr td.name::before {
         content: "Name";
-        position: absolute;
-        top: 0;
-        left: 40px;
+        @include define-content;
     }
-    table tbody tr td.modified::before{
+
+    table tbody tr td.modified::before {
         content: "Modified";
-        position: absolute;
-        top: 0;
-        left: 40px;
+        @include define-content;
     }
-    table tbody tr td.modified-by::before{
+
+    table tbody tr td.modified-by::before {
         content: "Modified by";
-        position: absolute;
-        top: 0;
-        left: 40px;
+        @include define-content;
     }
-    table tbody tr{
+
+    table tbody tr {
         display: block;
-        padding: 3rem 0;
+        padding-top: 1rem;
     }
-    table tbody tr td{
-        margin-bottom: 24px;
-        width: 100%;
-        display: block;
-        padding-left: 50%;
+
+    table {
+        tbody {
+            tr {
+                td {
+                    padding: 0.25rem 0 0.25rem 45%;
+                    width: 100% !important;
+                    display: block;
+                    border: 1px solid $bd-cl;
+                }
+            }
+        }
     }
-    .add-column{
+
+    .add-column {
         display: none;
+    }
+
+    tr {
+        td:first-child {
+            background-color: $bg-gray;
+        }
     }
 }
-.fa-file-excel-o{
+
+.fa-file-excel-o {
     color: green
 }
