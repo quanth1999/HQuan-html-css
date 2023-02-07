@@ -1,0 +1,36 @@
+.text-pink {
+  color: rgb(192, 69, 121);
+}
+
+.cus-icon {
+  width: 1.5rem;
+}
+
+.cus-grid {
+  display: grid;
+  grid-template-columns: 5% 30% 20% 20% auto;
+}
+
+.header-table {
+  border-bottom: 1px solid gray;
+}
+
+.container-cus {
+  padding-left: 3rem;
+}
+
+.grid-mobile {
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-template-rows: repeat(4);
+  margin-top: 0.8rem;
+}
+
+.header-one {
+  background-color: #f8f9fa;
+}
+
+h4 {
+  margin-top: 1rem;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
