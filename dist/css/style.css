@@ -13,6 +13,7 @@
 
 table {
   width: 100%;
+  margin-left: 1rem;
 }
 
 table * {
@@ -46,6 +47,11 @@ table thead tr th {
   width: 30%;
 }
 
+@media (min-width: 993px) {
+  tr {
+    border-bottom: 1px solid #d4dbe2;
+  }
+}
 @media screen and (max-width: 992px) {
   table thead {
     display: none;
@@ -87,4 +93,7 @@ table thead tr th {
   .add-column {
     display: none;
   }
+}
+.fa-file-excel-o {
+  color: green;
 }/*# sourceMappingURL=style.css.map */

@@ -40,6 +40,7 @@ $bg-gray: #f8f9fa;
 }
 table{
     width: 100%;
+    margin-left: 1rem;
 }
 table *{
     position: relative;
@@ -64,6 +65,11 @@ table thead tr th{
 .add-column{
     display: table-cell;
     width: 30%;
+}
+@media (min-width: 993px) {
+    tr{
+         border-bottom: 1px solid #d4dbe2;
+     }
 }
 @media screen and (max-width: 992px) {
     table thead {
@@ -106,4 +112,7 @@ table thead tr th{
     .add-column{
         display: none;
     }
+}
+.fa-file-excel-o{
+    color: green
 }
