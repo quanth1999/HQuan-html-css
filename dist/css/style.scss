@@ -101,9 +101,13 @@ table {
         @include define-content;
     }
 
-    table tbody tr {
-        display: block;
-        padding-top: 1rem;
+    table {
+        tbody {
+            tr {
+                display: block;
+                padding-top: 1rem;
+            }
+        }
     }
 
     table {
