@@ -7,7 +7,7 @@
 }
 
 .font-heading {
-  font-size: 24px;
+  font-size: 1.75rem;
   margin: 0 1rem;
 }
 
@@ -44,6 +44,10 @@ table thead tr th {
   width: 30%;
 }
 
+.fa-folder {
+  transform: scaleX(-1);
+}
+
 @media (min-width: 993px) {
   table {
     margin-top: 1rem;
@@ -56,6 +60,7 @@ table thead tr th {
   }
   tr td, tr th {
     padding: 0.5rem 0 0.5rem 0;
+    font-weight: normal;
   }
   tr .fa-folder {
     color: gray;
@@ -116,4 +121,8 @@ table thead tr th {
 }
 .fa-file-excel-o {
   color: green;
+}
+
+.dropdown-toggle::after {
+  display: none;
 }/*# sourceMappingURL=style.css.map */
