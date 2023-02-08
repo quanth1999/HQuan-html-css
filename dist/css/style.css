@@ -41,7 +41,6 @@ table thead tr th {
 }
 
 .add-column {
-  display: table-cell;
   width: 30%;
 }
 
@@ -55,41 +54,52 @@ table thead tr th {
   tr {
     border-bottom: 1px solid #eff1f3;
   }
+  tr td, tr th {
+    padding: 0.5rem 0 0.5rem 0;
+  }
 }
 @media screen and (max-width: 992px) {
   table thead {
     display: none;
   }
   table tbody tr td.file-type::before {
-    content: "File type";
+    content: "File Type";
     position: absolute;
-    top: 0;
+    top: 0.25rem;
     left: 20px;
+    font-style: oblique;
+    font-weight: bold;
   }
   table tbody tr td.name::before {
     content: "Name";
     position: absolute;
-    top: 0;
+    top: 0.25rem;
     left: 20px;
+    font-style: oblique;
+    font-weight: bold;
   }
   table tbody tr td.modified::before {
     content: "Modified";
     position: absolute;
-    top: 0;
+    top: 0.25rem;
     left: 20px;
+    font-style: oblique;
+    font-weight: bold;
   }
   table tbody tr td.modified-by::before {
-    content: "Modified by";
+    content: "Modified By";
     position: absolute;
-    top: 0;
+    top: 0.25rem;
     left: 20px;
+    font-style: oblique;
+    font-weight: bold;
   }
   table tbody tr {
     display: block;
-    padding-top: 1rem;
+    padding: 1rem 0 0.5rem 0;
   }
   table tbody tr td {
-    padding: 0.25rem 0 0.25rem 45%;
+    padding: 0.25rem 0 0.25rem 30%;
     width: 100% !important;
     display: block;
     border: 1px solid #c8ced4;
