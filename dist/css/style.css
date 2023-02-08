@@ -57,6 +57,9 @@ table thead tr th {
   tr td, tr th {
     padding: 0.5rem 0 0.5rem 0;
   }
+  tr .fa-folder {
+    color: gray;
+  }
 }
 @media screen and (max-width: 992px) {
   table thead {
